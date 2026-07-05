@@ -1,0 +1,194 @@
+{
+  "$schema": "./schema/packages.schema.json",
+  "schemaVersion": "0.1.0",
+  "packages": [
+    {
+      "key": "git",
+      "name": "Git",
+      "description": "Version control untuk praktikum, tugas, dan kolaborasi source code.",
+      "category": "developer-tool",
+      "profiles": ["core"],
+      "minimumSemester": 1,
+      "required": true,
+      "heavy": false,
+      "manual": false,
+      "mvpDefault": true,
+      "verification": ["git --version"],
+      "platforms": {
+        "windows": {
+          "manager": "winget",
+          "id": "Git.Git"
+        },
+        "macos": {
+          "manager": "brew",
+          "id": "git"
+        }
+      }
+    },
+    {
+      "key": "vscode",
+      "name": "Visual Studio Code",
+      "description": "Code editor utama untuk pembelajaran pemrograman dan pengembangan web.",
+      "category": "editor",
+      "profiles": ["core"],
+      "minimumSemester": 1,
+      "required": true,
+      "heavy": false,
+      "manual": false,
+      "mvpDefault": true,
+      "verification": ["code --version"],
+      "platforms": {
+        "windows": {
+          "manager": "winget",
+          "id": "Microsoft.VisualStudioCode"
+        },
+        "macos": {
+          "manager": "brew-cask",
+          "id": "visual-studio-code"
+        }
+      }
+    },
+    {
+      "key": "python",
+      "name": "Python",
+      "description": "Bahasa pemrograman untuk praktikum dasar dan analisis data awal.",
+      "category": "language",
+      "profiles": ["core"],
+      "minimumSemester": 1,
+      "required": true,
+      "heavy": false,
+      "manual": false,
+      "mvpDefault": true,
+      "verification": ["python --version", "python3 --version", "py -3 --version"],
+      "platforms": {
+        "windows": {
+          "manager": "winget",
+          "id": "Python.Python.3.13",
+          "fallbackIds": ["Python.Python.3.12"]
+        },
+        "macos": {
+          "manager": "brew",
+          "id": "python"
+        }
+      }
+    },
+    {
+      "key": "java-jdk",
+      "name": "Java JDK",
+      "description": "Java Development Kit untuk mata kuliah pemrograman yang membutuhkan Java.",
+      "category": "language",
+      "profiles": ["core"],
+      "minimumSemester": 1,
+      "required": true,
+      "heavy": false,
+      "manual": false,
+      "mvpDefault": true,
+      "verification": ["java --version", "javac --version"],
+      "platforms": {
+        "windows": {
+          "manager": "winget",
+          "id": "EclipseAdoptium.Temurin.21.JDK"
+        },
+        "macos": {
+          "manager": "brew-cask",
+          "id": "temurin"
+        }
+      },
+      "notes": "Versi final JDK harus mengikuti arahan dosen atau RPS."
+    },
+    {
+      "key": "nodejs-lts",
+      "name": "Node.js LTS",
+      "description": "Runtime JavaScript dan npm untuk tooling web modern.",
+      "category": "language",
+      "profiles": ["core"],
+      "minimumSemester": 1,
+      "required": true,
+      "heavy": false,
+      "manual": false,
+      "mvpDefault": true,
+      "verification": ["node --version", "npm --version"],
+      "platforms": {
+        "windows": {
+          "manager": "winget",
+          "id": "OpenJS.NodeJS.LTS"
+        },
+        "macos": {
+          "manager": "brew",
+          "id": "node"
+        }
+      }
+    },
+    {
+      "key": "postman",
+      "name": "Postman",
+      "description": "Tool untuk mencoba API dan latihan integrasi web service.",
+      "category": "developer-tool",
+      "profiles": ["core"],
+      "minimumSemester": 1,
+      "required": true,
+      "heavy": false,
+      "manual": false,
+      "mvpDefault": true,
+      "verification": ["postman --version"],
+      "platforms": {
+        "windows": {
+          "manager": "winget",
+          "id": "Postman.Postman"
+        },
+        "macos": {
+          "manager": "brew-cask",
+          "id": "postman"
+        }
+      }
+    },
+    {
+      "key": "browser",
+      "name": "Modern Browser",
+      "description": "Browser modern untuk debugging web, dokumentasi, dan akses tooling online.",
+      "category": "browser",
+      "profiles": ["core"],
+      "minimumSemester": 1,
+      "required": true,
+      "heavy": false,
+      "manual": false,
+      "mvpDefault": true,
+      "verification": ["browser manual verification"],
+      "platforms": {
+        "windows": {
+          "manager": "winget",
+          "id": "Google.Chrome"
+        },
+        "macos": {
+          "manager": "brew-cask",
+          "id": "google-chrome"
+        }
+      },
+      "notes": "Installer berikutnya harus melewati package ini jika browser modern sudah tersedia."
+    },
+    {
+      "key": "archive-utility",
+      "name": "Archive Utility",
+      "description": "Tool untuk membuka dan membuat file arsip seperti zip, 7z, dan rar.",
+      "category": "utility",
+      "profiles": ["core"],
+      "minimumSemester": 1,
+      "required": true,
+      "heavy": false,
+      "manual": false,
+      "mvpDefault": true,
+      "verification": ["archive utility manual verification"],
+      "platforms": {
+        "windows": {
+          "manager": "winget",
+          "id": "7zip.7zip"
+        },
+        "macos": {
+          "manager": "brew-cask",
+          "id": "the-unarchiver"
+        }
+      }
+    }
+  ]
+}
+

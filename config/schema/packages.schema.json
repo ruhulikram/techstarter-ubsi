@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "packages.schema.json",
+  "title": "Tech Starter UBSI Packages",
+  "type": "object",
+  "required": ["schemaVersion", "packages"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "packages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "name",
+          "description",
+          "category",
+          "profiles",
+          "minimumSemester",
+          "required",
+          "heavy",
+          "manual",
+          "mvpDefault",
+          "verification",
+          "platforms"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "key": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string",
+            "enum": ["browser", "developer-tool", "editor", "language", "utility"]
+          },
+          "profiles": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            }
+          },
+          "minimumSemester": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "heavy": {
+            "type": "boolean"
+          },
+          "manual": {
+            "type": "boolean"
+          },
+          "mvpDefault": {
+            "type": "boolean"
+          },
+          "verification": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "platforms": {
+            "type": "object",
+            "required": ["windows", "macos"],
+            "additionalProperties": false,
+            "properties": {
+              "windows": {
+                "$ref": "#/$defs/platformPackage"
+              },
+              "macos": {
+                "$ref": "#/$defs/platformPackage"
+              }
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "platformPackage": {
+      "type": "object",
+      "required": ["manager", "id"],
+      "additionalProperties": false,
+      "properties": {
+        "manager": {
+          "type": "string",
+          "enum": ["brew", "brew-cask", "manual", "winget"]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fallbackIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
+

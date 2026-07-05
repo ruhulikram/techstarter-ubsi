@@ -1,0 +1,79 @@
+{
+  "$schema": "./schema/profiles.schema.json",
+  "schemaVersion": "0.1.0",
+  "profiles": [
+    {
+      "key": "core",
+      "name": "Core",
+      "description": "Paket dasar bersama untuk seluruh mahasiswa.",
+      "status": "active",
+      "packageKeys": [
+        "git",
+        "vscode",
+        "python",
+        "java-jdk",
+        "nodejs-lts",
+        "postman",
+        "browser",
+        "archive-utility"
+      ]
+    },
+    {
+      "key": "si",
+      "name": "Sistem Informasi",
+      "description": "Profil SI untuk web, database, API, dan data dasar. Paket khusus belum diaktifkan pada MVP.",
+      "status": "planned",
+      "packageKeys": []
+    },
+    {
+      "key": "ti",
+      "name": "Teknologi Informasi",
+      "description": "Profil TI untuk networking, virtualisasi, keamanan, mobile, dan cloud. Paket khusus belum diaktifkan pada MVP.",
+      "status": "planned",
+      "packageKeys": []
+    },
+    {
+      "key": "web",
+      "name": "Web Programming",
+      "description": "Profil pengembangan web. PHP, Composer, dan database ditunda sampai keputusan akademik tersedia.",
+      "status": "planned",
+      "packageKeys": []
+    },
+    {
+      "key": "data",
+      "name": "Data Science",
+      "description": "Profil data science. Python library seperti pandas dan JupyterLab ditunda ke fase Python environment.",
+      "status": "planned",
+      "packageKeys": []
+    },
+    {
+      "key": "mobile",
+      "name": "Mobile Programming",
+      "description": "Profil mobile. Android Studio dan SDK tooling ditunda karena termasuk software berat.",
+      "status": "planned",
+      "packageKeys": []
+    },
+    {
+      "key": "networking",
+      "name": "Networking",
+      "description": "Profil networking. Wireshark, VirtualBox, dan Packet Tracer ditunda ke fase berikutnya.",
+      "status": "planned",
+      "packageKeys": []
+    },
+    {
+      "key": "database",
+      "name": "Database",
+      "description": "Profil database. MySQL, MariaDB, PostgreSQL, dan DBeaver ditunda sampai default diputuskan.",
+      "status": "planned",
+      "packageKeys": []
+    },
+    {
+      "key": "full",
+      "name": "Full",
+      "description": "Profil gabungan. Belum aktif karena membutuhkan storage besar dan keputusan paket berat.",
+      "status": "planned",
+      "packageKeys": []
+    }
+  ]
+}
+

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "semesters.schema.json",
+  "title": "Tech Starter UBSI Semesters",
+  "type": "object",
+  "required": ["schemaVersion", "semesters"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "semesters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["semester", "recommendedProfiles", "recommendedPackageKeys", "notes"],
+        "additionalProperties": false,
+        "properties": {
+          "semester": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "recommendedProfiles": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            }
+          },
+          "recommendedPackageKeys": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            }
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
+

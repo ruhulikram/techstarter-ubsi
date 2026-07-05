@@ -1,0 +1,55 @@
+{
+  "$schema": "./schema/semesters.schema.json",
+  "schemaVersion": "0.1.0",
+  "semesters": [
+    {
+      "semester": 1,
+      "recommendedProfiles": ["core"],
+      "recommendedPackageKeys": [],
+      "notes": "Foundation MVP hanya merekomendasikan Core."
+    },
+    {
+      "semester": 2,
+      "recommendedProfiles": ["core"],
+      "recommendedPackageKeys": [],
+      "notes": "Web, database, Composer, dan pandas ditunda ke fase berikutnya."
+    },
+    {
+      "semester": 3,
+      "recommendedProfiles": ["core"],
+      "recommendedPackageKeys": [],
+      "notes": "Profil SI/TI belum aktif pada MVP."
+    },
+    {
+      "semester": 4,
+      "recommendedProfiles": ["core"],
+      "recommendedPackageKeys": [],
+      "notes": "Mobile dan virtualisasi belum aktif pada MVP."
+    },
+    {
+      "semester": 5,
+      "recommendedProfiles": ["core"],
+      "recommendedPackageKeys": [],
+      "notes": "Docker dan data science lanjutan belum aktif pada MVP."
+    },
+    {
+      "semester": 6,
+      "recommendedProfiles": ["core"],
+      "recommendedPackageKeys": [],
+      "notes": "Rekomendasi lanjutan akan mengikuti arahan dosen atau RPS."
+    },
+    {
+      "semester": 7,
+      "recommendedProfiles": ["core"],
+      "recommendedPackageKeys": [],
+      "notes": "Rekomendasi lanjutan akan mengikuti arahan dosen atau RPS."
+    },
+    {
+      "semester": 8,
+      "recommendedProfiles": ["core"],
+      "recommendedPackageKeys": [],
+      "notes": "Rekomendasi lanjutan akan mengikuti arahan dosen atau RPS."
+    }
+  ]
+}
+

@@ -1,0 +1,15 @@
+# Local logs and generated reports
+logs/
+*.log
+verification-report.*
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
