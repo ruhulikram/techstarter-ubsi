@@ -10,4 +10,4 @@ All notable changes to this project will be documented in this file.
 - Added local manifest validator.
 - Added GitHub Actions validation workflow.
 - Added Indonesian README, contributing guide, security policy, and MIT license.
-
+- Added Windows one-command installer through `install.ps1`.

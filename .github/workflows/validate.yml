@@ -21,3 +21,14 @@ jobs:
       - name: Validate package, profile, and semester manifests
         run: python tools/validate-manifest.py
 
+  windows-installer:
+    name: Validate Windows installer dry run
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run installer dry run
+        shell: powershell
+        run: .\install.ps1 -DryRun -NonInteractive
