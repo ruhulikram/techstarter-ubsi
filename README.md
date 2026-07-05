@@ -14,6 +14,45 @@ python tools/validate-manifest.py
 
 Jika Python belum tersedia di perangkat, pasang Python terlebih dahulu dari sumber resmi atau gunakan environment yang sudah disediakan oleh kelas/lab.
 
+## Install Python di Windows
+
+Untuk Windows 10/11, cara paling mudah adalah menggunakan `winget` dari Command Prompt atau PowerShell.
+
+1. Buka **Command Prompt** atau **PowerShell**.
+2. Jalankan salah satu command berikut:
+
+```powershell
+winget install Python.Python.3.13
+```
+
+Jika versi tersebut belum tersedia di perangkat, gunakan:
+
+```powershell
+winget install Python.Python.3.12
+```
+
+3. Tutup terminal, lalu buka lagi.
+4. Cek instalasi Python:
+
+```powershell
+python --version
+pip --version
+```
+
+Jika `python` belum dikenali, coba:
+
+```powershell
+py -3 --version
+```
+
+Setelah Python berhasil terpasang, jalankan kembali:
+
+```bash
+python tools/validate-manifest.py
+```
+
+Catatan: command ini hanya memasang Python. Installer otomatis untuk semua paket Core akan dibuat pada fase berikutnya.
+
 ## Isi MVP
 
 - Manifest paket di `config/packages.json`
@@ -62,4 +101,3 @@ Lihat `CONTRIBUTING.md` sebelum mengubah manifest atau menambahkan paket baru. S
 ```bash
 python tools/validate-manifest.py
 ```
-
