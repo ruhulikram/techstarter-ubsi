@@ -132,7 +132,6 @@ Profil lanjutan seperti SI, TI, Web, Data, Mobile, Networking, Database, dan Ful
 4. Verification, logging, report, troubleshooting, dan release ZIP.
 5. Profil lanjutan SI, TI, Web, Data, Mobile, Networking, dan Database.
 
-Detail produk lengkap tersedia di `PRD.md`.
 
 ## Kontribusi
 
